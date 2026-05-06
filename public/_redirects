@@ -1,0 +1,10 @@
+# Redirigir todas las peticiones a la API al backend de Render
+# Reemplaza <TU_APP_EN_RENDER> con el dominio real de tu backend en Render antes de subirlo a Netlify
+/api/* https://<TU_APP_EN_RENDER>.onrender.com/api/:splat 200
+
+# Redirigir imágenes y archivos subidos al backend
+/uploads/* https://<TU_APP_EN_RENDER>.onrender.com/uploads/:splat 200
+/pdfs/* https://<TU_APP_EN_RENDER>.onrender.com/api/pdf-file/:splat 200
+
+# Angular SPA Fallback
+/* /index.html 200
